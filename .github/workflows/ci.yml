@@ -40,7 +40,7 @@ jobs:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
       - name: GH_TEST
-        if: startsWith(github.event.ref, 'refs/tags/')
+        # if: startsWith(github.event.ref, 'refs/tags/')
         run: |
           echo "$GITHUB_REF#refs/tags/"
           env | sort | grep GIT
