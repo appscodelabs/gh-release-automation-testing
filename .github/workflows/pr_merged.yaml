@@ -13,5 +13,5 @@ jobs:
 
     - name: Run a one-line script
       run: |
-        echo "${{ toJSON(github.event) }}"
+        echo "${{ toJSON(github) }}"
 
