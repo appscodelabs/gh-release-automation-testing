@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+# set -x
 
 pr=$(hub api --paginate graphql -f query='
 {
