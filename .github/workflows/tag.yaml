@@ -41,5 +41,7 @@ jobs:
       - name: GH_TEST
         if: startsWith(github.event.ref, 'refs/tags/')
         run: |
-          echo "$GITHUB_REF#refs/tags/"
+          prefix="refs/tags/"
+          tag="$GITHUB_REF#$prefix"
+          echo $tag
           env | sort | grep GIT
