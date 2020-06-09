@@ -48,8 +48,5 @@ jobs:
       - name: GH_TEST
         # if: startsWith(github.event.ref, 'refs/tags/')
         run: |
-          reponame=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER}
+          reponame=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER"/"}
           echo $reponame
-
-# GITHUB_REF=refs/heads/master
-# GITHUB_REF=refs/tags/v0.1.5
