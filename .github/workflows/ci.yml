@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Env
         run: |
-          env
+          env | sort | grep GIT
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
