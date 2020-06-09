@@ -21,6 +21,9 @@ pr=$(hub api --paginate graphql -f query='
 
 echo $pr
 
+# --join-output / -j:
+# Like -r but jq won't print a newline after each output
+
 pr_number=$(echo $pr | jq -j '.data.repository.pullRequests.edges[0].node.number')
 tag=$(echo $pr | jq -j '.data.repository.pullRequests.edges[0].node.milestone.title')
 
