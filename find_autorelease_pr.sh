@@ -21,8 +21,8 @@ pr=$(hub api --paginate graphql -f query='
 
 echo $pr
 
-pr_number=$(echo $pr | jq '.data.repository.pullRequests.edges[0].node.number')
-tag=$(echo $pr | jq '.data.repository.pullRequests.edges[0].node.milestone.title')
+pr_number=$(echo $pr | jq -r '.data.repository.pullRequests.edges[0].node.number')
+tag=$(echo $pr | jq -r '.data.repository.pullRequests.edges[0].node.milestone.title')
 
 echo $pr_number
 echo $tag
