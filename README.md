@@ -5,9 +5,11 @@
 - https://stackoverflow.com/questions/5358336/how-to-list-all-tags-along-with-the-full-message-in-git
 
 ```
-$ git tag -l --format='%(tag) %(subject) %(body)' v0.1.1
+$ git tag -fa v0.1.1 -m v0.1.1 -m "Issue-tracker: https://github.com/tamalsaha/gh-release-automation-testing/pull/3"
 
-$ git tag -l --format='%(contents)' v0.1.1
+$ git tag -l --format='%(tag) %(subject) %(body)' v0.1.0
+
+$ git tag -l --format='%(contents)' v0.1.0
 ```
 
 ## URL parsing
