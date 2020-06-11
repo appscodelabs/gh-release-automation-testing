@@ -1,5 +1,20 @@
 # gh-release-automation-testing
 
+## Project Version number scheme
+
+`vYYYY.W.B`
+
+- 4 digit year
+- Week of the year `date +%U`
+- Build of the week starting wtih 0
+
+For alpha, beta and rc rleases, we add `-(alpha|beta|rc).N` suffix.
+
+Our project version scheme does not follow semver but it maintains 2 important properties:
+
+- It can be parsed as semver by any semver library
+- Sorting release versions as semver will return them in chronological order. This will tell users which version was released later.
+
 ## Show tag message
 
 - https://stackoverflow.com/questions/5358336/how-to-list-all-tags-along-with-the-full-message-in-git
