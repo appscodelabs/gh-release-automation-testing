@@ -6,14 +6,14 @@
 
 - 4 digit year
 - Week of the year `date +%U`
-- Build of the week starting wtih 0
+- Build of the week starting with 0
 
-For alpha, beta and rc rleases, we add `-(alpha|beta|rc).N` suffix.
+For alpha, beta and rc releases, we add `-(alpha|beta|rc).N` suffix.
 
 Our project version scheme does not follow semver but it maintains 2 important properties:
 
-- It can be parsed as semver by any semver library
-- Sorting release versions as semver will return them in chronological order. This will tell users which version was released later.
+- It can be parsed by any semver library
+- Sorting release versions as semver will return them in chronological order. So, you will be easily tell which version was released later.
 
 ## Show tag message
 
