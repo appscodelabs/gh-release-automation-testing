@@ -1,0 +1,23 @@
+
+release
+
+vY.M.B/
+  release.json
+  {
+
+
+  }
+
+
+[
+	{
+	  	"github.com/stashed/apimachinery": "v0.10.2",
+	},
+	{
+	  	"github.com/stashed/stash": "v0.10.2",
+	  	"github.com/stashed/cli": "v0.10.2"
+	},
+	{
+
+	}
+]
