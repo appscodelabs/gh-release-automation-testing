@@ -1,4 +1,13 @@
 
+/cmd go mod edit -require=repo@ver -require=r2@v2
+Release-tracker: url
+
+
+
+go mod edit -require=repo@ver 
+go mod tidy
+go mod vendor
+
 release
 
 vY.M.B/
@@ -7,17 +16,101 @@ vY.M.B/
 
 
   }
+{
+	"repos": [
+		{
+		  	"github.com/stashed/apimachinery": {
+				"tag": "v0.10.2"  release-0.10.2 || release-0.10
 
-
-[
-	{
-	  	"github.com/stashed/apimachinery": "v0.10.2",
+		  		"tag": {
+		  			"release-": "v0.10.0"
+		  		}
+		  	},
+		},
+		{
+		  	"github.com/stashed/stash": "v0.10.2",
+		  	"github.com/stashed/cli": {
+		  		"tag": {
+		  			"release-0.10": "v0.10.0"
+		  		},
+		  		"cmds": ["make gen fmt"]  # <---------------------
+		  	},
+		  	"github.com/stashed/postgres": {
+		  		"tags___": {
+		  			"release-9.6": "9.6-v2"
+		  		}
+		  	},
+		},
+		{
+			"github.com/stashed/installer": {
+				"tag": "vY.M.B",
+				"base_ref": "master",
+				"head_ref": "release-Y.M.B-rc.0",
+				"cmds": {
+					"make prep-release CHART=",
+					"make gen fmt"
+				}
+			}
+		}
+	],
+	"publish": {
+		"charts-invalidate",
+		"website update",
+		"readme update",
+		"publish bundle",
 	},
-	{
-	  	"github.com/stashed/stash": "v0.10.2",
-	  	"github.com/stashed/cli": "v0.10.2"
-	},
-	{
+	"extenal_dependents": [
+		"github.com/kubedb/apimachinery": {
+			"cmds":
+			[
+				"make gen fmt"
+				"make update Makefile.stash"
+			]
+		}
+	],
+}
 
-	}
-]
+
+
+/ok-to-release
+
+/tagged github.com/stashed/apimachinery <- self action
+/go github.com/stashed/apimachinery mod_path
+
+/ready-to-tag github.com/stashed/stash <merged_sha>  <----------remote action
+
+/cherry-picked github.com/stashed/stash branch-name <----------remote action
+/cherry-picked github.com/stashed/stash branch-name <----------remote action
+
+/tagged github.com/stashed/postgres
+/go github.com/stashed/postgres mod_path
+
+
+
+/tagged github.com/stashed/stash
+
+
+/ready-to-tag github.com/stashed/stash <merged_sha>  <----------remote action
+
+/chart-published
+
+
+// catalog
+
+- exists?
+- go template?
+- 
+
+// chart
+
+- chart version
+- app version
+- values
+- chart readme
+
+make prep-release CHART= 
+
+// website
+
+// README update
+

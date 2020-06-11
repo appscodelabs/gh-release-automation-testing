@@ -65,7 +65,7 @@ else if patch == 0
 		- git push -u origin HEAD --tags
 	else
 		- git checkout master
-		- git checkout release-$major.$minor
+		- git checkout -b release-$major.$minor
 		- git tag -fa $tag -m $tag -m "Release-tracker: $url"
 		- git push -u origin HEAD --tags
 ```
