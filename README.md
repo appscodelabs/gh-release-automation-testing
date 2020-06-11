@@ -20,7 +20,7 @@ $ git tag -l --format='%(contents)' v0.1.0
 
 - https://gist.github.com/tamalsaha/b8b30e8391705595c00be57d736d95ee
 
-## Branch / Merge Alg
+## Branch checkout Alg
 
 ```
 # https://github.com/cloudflare/semver_bash
