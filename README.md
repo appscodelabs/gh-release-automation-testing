@@ -2,10 +2,10 @@
 
 ## Project Version number scheme
 
-`vYYYY.W.B`
+`vYYYY.M.B`
 
 - 4 digit year
-- Week of the year `date +%U`
+- Month(1-12) of the year `date +%-m`
 - Build of the week starting with 0
 
 For alpha, beta and rc releases, we add `-(alpha|beta|rc).N` suffix.
@@ -37,7 +37,7 @@ $ git tag -l --format='%(contents)' v0.1.0
 
 ## Parsing Semver in Bash
 
-- https://github.com/cloudflare/semver_bash
+- https://github.com/cloudflare/semver_bas
 
 ## Branch checkout Alg
 
