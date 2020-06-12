@@ -69,3 +69,19 @@ else if patch == 0
 		- git tag -fa $tag -m $tag -m "Release-tracker: $url"
 		- git push -u origin HEAD --tags
 ```
+
+## Multi-module Go repo
+
+Does not support multiple Go modules per repo.
+
+## List commits between 2 commit hashes in git
+
+```
+# [commit1, commit2]
+git log --oneline --ancestry-path commit1..commit2
+
+git log --oneline --ancestry-path v0.9.0-rc.0..v0.9.0-rc.1
+
+# commit url
+# https://github.com/kubernetes/apimachinery/commit/385a554aa7b4f08109ae39b86475fb111d053f69
+```
