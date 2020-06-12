@@ -4,7 +4,7 @@ Release-tracker: url
 
 
 
-go mod edit -require=repo@ver 
+go mod edit -require=repo@ver
 go mod tidy
 go mod vendor
 
@@ -99,7 +99,7 @@ vY.M.B/
 
 - exists?
 - go template?
-- 
+-
 
 // chart
 
@@ -108,9 +108,56 @@ vY.M.B/
 - values
 - chart readme
 
-make prep-release CHART= 
+make prep-release CHART=
 
 // website
 
 // README update
 
+{
+	"repos": [
+		{
+		  	"github.com/stashed/apimachinery": {
+				"tag": "vY.M.B",
+				"base_ref": "master",
+				"head_ref": "release-Y.M.B-rc.0"
+		  	}
+		},
+		{
+		  	"github.com/stashed/stash": "v0.10.2",
+		  	"github.com/stashed/cli": {
+		  		"tag": {
+		  			"release-0.10": "v0.10.0"
+		  		},
+		  		"cmds": ["make gen fmt"]
+		  	},
+		  	"github.com/stashed/postgres": {
+		  		"tags___": {
+		  			"release-9.6": "9.6-v2"
+		  		}
+		  	}
+		},
+		{
+			"github.com/stashed/installer": {
+				"tag": "vY.M.B",
+				"base_ref": "master",
+				"head_ref": "release-Y.M.B-rc.0",
+				"cmds": [
+					"make prep-release CHART=",
+					"make gen fmt"
+				]
+			}
+		}
+	],
+	"extenal_dependents": [
+		{
+			"github.com/kubedb/apimachinery": {
+				"cmds":
+				[
+					"make gen fmt"
+					"make update Makefile.stash"
+				]
+			}
+		}
+	]
+}
