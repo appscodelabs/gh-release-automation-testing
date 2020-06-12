@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "github.com/appscode-cloud/apimachinery": {
+        "tag": "v0.10.0-alpha.2"
+      }
+    },
+    {
+      "github.com/appscode-cloud/cli": {
+        "tag": "v0.10.0-alpha.2"
+      },
+      "github.com/appscode-cloud/postgres": {
+        "tags": {
+          "release-10.2": "10.2-v1",
+          "release-10.6": "10.6-v1",
+          "release-11.1": "11.1-v1",
+          "release-11.2": "11.2-v1",
+          "release-9.6": "9.6-v1"
+        }
+      },
+      "github.com/appscode-cloud/stash": {
+        "tag": "v0.10.0-alpha.2"
+      }
+    }
+  ]
+}
