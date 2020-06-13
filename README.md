@@ -85,3 +85,18 @@ git log --oneline --ancestry-path v0.9.0-rc.0..v0.9.0-rc.1
 # commit url
 # https://github.com/kubernetes/apimachinery/commit/385a554aa7b4f08109ae39b86475fb111d053f69
 ```
+
+## How to tag an older commit in Git?
+
+```sh
+git tag -a v1.2 9fceb02 -m "Message here"
+```
+
+- https://stackoverflow.com/questions/4404172/how-to-tag-an-older-commit-in-git
+
+## Git Reset
+
+```sh
+git reset --hard cedc856
+```
+
