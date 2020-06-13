@@ -35,7 +35,7 @@ jobs:
       - name: Install release automaton
         run: |
           echo $GOBIN
-          GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@f197c02647e592fcc2bdb0a5d1be18cce6c49be7
+          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@f197c02647e592fcc2bdb0a5d1be18cce6c49be7
       - name: GH_TEST
         # if: startsWith(github.event.ref, 'refs/tags/')
         run: |
