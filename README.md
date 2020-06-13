@@ -51,7 +51,7 @@ if $tag exists
 if patch > 0 && special == ""
 	# this is a patch release
 	if `release-$major.$minor.$patch` or `release-$major.$minor` branch exists
-		- git tag -fa $tag -m $tag -m "Release-tracker: $url"
+		- git tag -a $tag -m $tag -m "Release-tracker: $url"
 		- git push -u origin HEAD --tags
 	else
 		_PANIC_ "please cherry pick all commits for a patch release"
@@ -61,12 +61,12 @@ else if patch == 0
 	if `release-$major.$minor` branch exists
 		- git checkout release-$major.$minor
 		- git merge master
-		- git tag -fa $tag -m $tag -m "Release-tracker: $url"
+		- git tag -a $tag -m $tag -m "Release-tracker: $url"
 		- git push -u origin HEAD --tags
 	else
 		- git checkout master
 		- git checkout -b release-$major.$minor
-		- git tag -fa $tag -m $tag -m "Release-tracker: $url"
+		- git tag -a $tag -m $tag -m "Release-tracker: $url"
 		- git push -u origin HEAD --tags
 ```
 
