@@ -100,3 +100,13 @@ git tag -a v1.2 9fceb02 -m "Message here"
 git reset --hard cedc856
 ```
 
+## How To Delete Local and Remote Tags on Git
+
+- https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/
+
+```sh
+$ git tag -d <tag_name>
+
+$ git push --delete origin tagname
+$ git push origin :refs/tags/<tag>
+```
