@@ -18,6 +18,16 @@ jobs:
         with:
           go-version: 1.14
         id: go
+      - name: Prepare Host
+        run: |
+          # install yq
+          curl -fsSL -o yq https://github.com/mikefarah/yq/releases/download/3.3.0/yq_linux_amd64
+          chmod +x yq
+          sudo mv yq /usr/local/bin/yq
+          # install kubectl
+          curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
+          chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl
       - name: Env
         run: |
           env | sort | grep GIT
@@ -47,4 +57,3 @@ jobs:
         run: |
           reponame=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER"/"}
           echo $reponame
-
