@@ -53,6 +53,9 @@ jobs:
 
       - name: Release
         if: github.event.issue.milestone != null
+        env:
+          GITHUB_USER: 1gtm
+          GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
         run: |
           release-automaton \
             --release-tracker=${{ github.event.issue.html_url }} \
