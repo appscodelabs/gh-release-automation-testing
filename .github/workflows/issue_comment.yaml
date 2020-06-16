@@ -31,7 +31,7 @@ jobs:
           sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@x7
 
       - name: Release
-        if: ${{ github.event.issue.milestone.title }} != ''
+        if: ${{ github.event.issue.milestone.title }} != null
         run: |
           release-automaton \
             --release-tracker=${{ github.event.issue.html_url }} \
