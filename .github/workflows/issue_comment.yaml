@@ -28,7 +28,7 @@ jobs:
 
       - name: Install release automaton
         run: |
-          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@x7
+          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@35e8066aef2df18547734849c42f20fcb62991a4
 
       - name: Release
         if: github.event.issue.milestone != null
