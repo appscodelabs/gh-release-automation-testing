@@ -32,7 +32,7 @@ jobs:
 
       - name: Install release automaton
         run: |
-          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@dd22a2b59dd0739d271bd55e25ef642e178529fc
+          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@3eff0d17bed3544ee9cacacfdc1e6946229f6d84
           sudo rm -rf /home/runner/go/pkg
           sudo chown -R $(id -u):$(id -g) /home/runner/go
 
