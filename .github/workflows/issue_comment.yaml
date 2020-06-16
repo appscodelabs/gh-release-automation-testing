@@ -32,7 +32,7 @@ jobs:
 
       - name: Install release automaton
         run: |
-          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@540376887ec679a9a9285c51e9c2adc5d04802a2
+          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@9dec6bb03481a1487a858cab507945881cd0a5f5
 
       - name: Install GitHub CLI
         run: |
