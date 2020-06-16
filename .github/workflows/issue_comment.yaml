@@ -33,6 +33,8 @@ jobs:
       - name: Install release automaton
         run: |
           sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@08bcaaa657ec9e48ed34f504a4d93294268d5e72
+          sudo rm -rf /home/runner/go/pkg
+          sudo chown -R $(id -u):$(id -g) /home/runner/go
 
       - name: Install GitHub CLI
         run: |
@@ -57,7 +59,7 @@ jobs:
           GITHUB_USER: 1gtm
           GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
         run: |
-          sudo release-automaton \
+          release-automaton \
             --release-tracker=${{ github.event.issue.html_url }} \
             --comment-id=${{ github.event.comment.id }} \
             --release=${{ github.event.issue.milestone.title }} \
