@@ -9,28 +9,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+
       - name: Set up Go 1.14
         uses: actions/setup-go@v1
         with:
           go-version: 1.14
         id: go
+
       - name: Env
         run: |
           env | sort | grep GIT
+
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "$RUNNER_CONTEXT"
+
       - name: Install release automaton
         run: |
           echo $GOBIN
           GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@x7
+
+      - name: Release
+        run: |
+          release-automaton \
+            --release-tracker=${{ github.event.issue.html_url }} \
+            --comment-id=${{ github.event.comment.id }} \
+            --release=${{ github.event.issue.milestone.title }} \
+            --release-file=${{ github.event.issue.milestone.title }}/release.json
