@@ -30,6 +30,36 @@ jobs:
         run: |
           sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@35e8066aef2df18547734849c42f20fcb62991a4
 
+      - name: Install GitHub CLI
+        run: |
+          curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+          sudo mv bin/hub /usr/local/bin
+
+      - name: Prepare git
+        env:
+          GITHUB_USER: 1gtm
+          GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+        run: |
+          set -x
+          git config --global user.name "1gtm"
+          git config --global user.email "1gtm@appscode.com"
+          git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          pr_url="${{ github.event.issue.pull_request.html_url }}"
+          echo $pr_url
+          proto="$(echo $pr_url | grep :// | sed -e's,^\(.*://\).*,\1,g')"
+          url="$(echo ${pr_url/$proto/})"
+          IFS='/'                 # / is set as delimiter
+          read -ra PATH <<<"$url" # str is read into an array as tokens separated by IFS
+          if [ ${PATH[0]} != 'github.com' ] || [ ${#PATH[@]} -ne 5 ]; then
+            echo "failed to parse relase-tracker: $url"
+            exit 1
+          fi
+          echo "REPOSITORY_OWNER" ${PATH[1]}
+          echo "REPOSITORY_NAME" ${PATH[2]}
+          echo "PR_NUMBER" ${PATH[4]}
+          git fetch origin
+          hub pr checkout ${PATH[4]}
+
       - name: Release
         if: github.event.issue.milestone != null
         run: |
