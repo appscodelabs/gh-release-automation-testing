@@ -37,4 +37,4 @@ jobs:
             --release-tracker=${{ github.event.issue.html_url }} \
             --comment-id=${{ github.event.comment.id }} \
             --release=${{ github.event.issue.milestone.title }} \
-            --release-file=${{ github.event.issue.milestone.title }}/release.json
+            --release-file=./${{ github.event.issue.milestone.title }}/release.json
