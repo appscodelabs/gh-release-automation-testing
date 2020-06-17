@@ -19,50 +19,50 @@ jobs:
         run: |
           env | sort | grep GIT
 
-      - name: Set up Go 1.14
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.14
-        id: go
+      # - name: Set up Go 1.14
+      #   uses: actions/setup-go@v1
+      #   with:
+      #     go-version: 1.14
+      #   id: go
 
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+      # - name: Dump GitHub context
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJson(github) }}
+      #   run: echo "$GITHUB_CONTEXT"
 
-      - name: Install release automaton
-        run: |
-          cd /tmp
-          git clone --branch=x7 https://github.com/appscodelabs/release-automaton.git
-          cd release-automaton
-          go install ./...
-          sudo mv /home/runner/go/bin/release-automaton /usr/local/bin/release-automaton
+      # - name: Install release automaton
+      #   run: |
+      #     cd /tmp
+      #     git clone --branch=x7 https://github.com/appscodelabs/release-automaton.git
+      #     cd release-automaton
+      #     go install ./...
+      #     sudo mv /home/runner/go/bin/release-automaton /usr/local/bin/release-automaton
 
-      - name: Install GitHub CLI
-        run: |
-          curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
-          sudo mv bin/hub /usr/local/bin
+      # - name: Install GitHub CLI
+      #   run: |
+      #     curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+      #     sudo mv bin/hub /usr/local/bin
 
-      - name: Prepare git
-        env:
-          GITHUB_USER: 1gtm
-          GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
-        run: |
-          set -x
-          git config --global user.name "1gtm"
-          git config --global user.email "1gtm@appscode.com"
-          git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git fetch origin
-          hub pr checkout ${{ github.event.issue.number }}
+      # - name: Prepare git
+      #   env:
+      #     GITHUB_USER: 1gtm
+      #     GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+      #   run: |
+      #     set -x
+      #     git config --global user.name "1gtm"
+      #     git config --global user.email "1gtm@appscode.com"
+      #     git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+      #     git fetch origin
+      #     hub pr checkout ${{ github.event.issue.number }}
 
-      - name: Release
-        if: github.event.issue.milestone != null
-        env:
-          GITHUB_USER: 1gtm
-          LGTM_GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
-        run: |
-          release-automaton \
-            --release-tracker=${{ github.event.issue.html_url }} \
-            --comment-id=${{ github.event.comment.id }} \
-            --release=${{ github.event.issue.milestone.title }} \
-            --release-file=./${{ github.event.issue.milestone.title }}/release.json
+      # - name: Release
+      #   if: github.event.issue.milestone != null
+      #   env:
+      #     GITHUB_USER: 1gtm
+      #     LGTM_GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+      #   run: |
+      #     release-automaton \
+      #       --release-tracker=${{ github.event.issue.html_url }} \
+      #       --comment-id=${{ github.event.comment.id }} \
+      #       --release=${{ github.event.issue.milestone.title }} \
+      #       --release-file=./${{ github.event.issue.milestone.title }}/release.json
