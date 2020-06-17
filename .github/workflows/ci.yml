@@ -12,12 +12,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+
       - name: Set up Go 1.14
         uses: actions/setup-go@v1
         with:
           go-version: 1.14
         id: go
+
+      - name: Env
+        run: |
+          env | sort | grep GIT
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: Install release automaton
+        run: |
+          cd /tmp
+          git clone --branch=x7 https://github.com/appscodelabs/release-automaton.git
+          cd release-automaton
+          go install ./...
+          # sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@8faf798e416e9f3529df80b93d0e686dd4cb9575
+          # sudo rm -rf /home/runner/go/pkg
+          # sudo chown -R $(id -u):$(id -g) /home/runner/go
+
+      - name: Install GitHub CLI
+        run: |
+          curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+          sudo mv bin/hub /usr/local/bin
+
       - name: Prepare Host
         run: |
           # install yq
@@ -28,25 +54,7 @@ jobs:
           curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
           chmod +x ./kubectl
           sudo mv ./kubectl /usr/local/bin/kubectl
-      - name: Env
-        run: |
-          env | sort | grep GIT
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "$RUNNER_CONTEXT"
-      - name: Install release automaton
-        run: |
-          echo $GOBIN
-          sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@x7
+
       - name: GH_TEST
         # if: startsWith(github.event.ref, 'refs/tags/')
         run: |
