@@ -36,11 +36,6 @@ jobs:
           cd release-automaton
           go install ./...
           sudo mv /home/runner/go/bin/release-automaton /usr/local/bin/release-automaton
-          release-automaton -h || true
-          # ls -l /home/runner/go/bin
-          # # sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@8faf798e416e9f3529df80b93d0e686dd4cb9575
-          # # sudo rm -rf /home/runner/go/pkg
-          # # sudo chown -R $(id -u):$(id -g) /home/runner/go
 
       - name: Install GitHub CLI
         run: |
