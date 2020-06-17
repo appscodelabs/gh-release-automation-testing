@@ -34,10 +34,10 @@ jobs:
           cd /tmp
           git clone --branch=x7 https://github.com/appscodelabs/release-automaton.git
           cd release-automaton
-          go install ./...
+          sudo GOBIN=/usr/local/bin go install ./...
           # sudo GO111MODULE=on GOBIN=/usr/local/bin go get github.com/appscodelabs/release-automaton@8faf798e416e9f3529df80b93d0e686dd4cb9575
-          # sudo rm -rf /home/runner/go/pkg
-          # sudo chown -R $(id -u):$(id -g) /home/runner/go
+          sudo rm -rf /home/runner/go/pkg
+          sudo chown -R $(id -u):$(id -g) /home/runner/go
 
       - name: Install GitHub CLI
         run: |
