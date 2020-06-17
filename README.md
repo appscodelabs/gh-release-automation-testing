@@ -1,5 +1,13 @@
 # gh-release-automation-testing
 
+```sh
+release-automaton \
+    --release-tracker=https://github.com/appscodelabs/gh-release-automation-testing/pull/21 \
+    --comment-id=645104095 \
+    --release=v2020.6.16 \
+    --release-file=./v2020.6.16/release.json
+```
+
 ## Project Version number scheme
 
 `vYYYY.M.B`
