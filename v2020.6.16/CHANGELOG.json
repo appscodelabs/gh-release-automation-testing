@@ -1,0 +1,31 @@
+{
+  "release": "v2020.6.16",
+  "projects": [
+    {
+      "url": "github.com/appscode-cloud/apimachinery",
+      "releases": [
+        {
+          "tag": "v0.10.0-alpha.2",
+          "commits": [
+            {
+              "SHA": "6e0ad5f8",
+              "Subject": "Add script to update release tracker on pr merge (#23)"
+            },
+            {
+              "SHA": "cbf9b376",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "d12b3d4b",
+              "Subject": "Update to Kubernetes v1.18.3 (#21)"
+            },
+            {
+              "SHA": "1956a312",
+              "Subject": "Update to Kubernetes v1.18.3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
