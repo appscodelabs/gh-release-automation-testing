@@ -26,6 +26,72 @@
           ]
         }
       ]
+    },
+    {
+      "url": "github.com/appscode-cloud/cli",
+      "releases": [
+        {
+          "tag": "v0.10.0-alpha.2",
+          "commits": [
+            {
+              "SHA": "3f49074",
+              "Subject": "Prepare for release v0.10.0-alpha.2"
+            },
+            {
+              "SHA": "b1b28ff",
+              "Subject": "Use GITHUB_BASE_REF to detect target branch"
+            },
+            {
+              "SHA": "1e16b99",
+              "Subject": "Add script to update release tracker on pr merge (#21)"
+            },
+            {
+              "SHA": "f91bf33",
+              "Subject": "Make release non-draft"
+            },
+            {
+              "SHA": "d29bdb6",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "b727108",
+              "Subject": "Update to Kubernetes v1.18.3 (#20)"
+            },
+            {
+              "SHA": "f3f03aa",
+              "Subject": "Update to Kubernetes v1.18.3"
+            },
+            {
+              "SHA": "bcd7c5e",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "9882aa2",
+              "Subject": "Add blank line after license header (#19)"
+            },
+            {
+              "SHA": "7774218",
+              "Subject": "Update dev scripts (#18)"
+            },
+            {
+              "SHA": "38eb35c",
+              "Subject": "Run unit tests against SRC_PKGS"
+            },
+            {
+              "SHA": "526949c",
+              "Subject": "Update to Kubernetes v1.18.3 (#17)"
+            },
+            {
+              "SHA": "fc3e6c5",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "3943575",
+              "Subject": "Trigger the workflow on push or pull request"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
