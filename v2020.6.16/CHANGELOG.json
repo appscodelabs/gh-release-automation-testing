@@ -352,6 +352,91 @@
           ]
         },
         {
+          "tag": "11.1-v1",
+          "commits": [
+            {
+              "SHA": "fc9fc68",
+              "Subject": "Prepare for release 11.1-v1 (#4)"
+            },
+            {
+              "SHA": "6ecb8bc",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#68)"
+            },
+            {
+              "SHA": "526e335",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#63)"
+            },
+            {
+              "SHA": "e5fff5c",
+              "Subject": "[cherry-pick] Update release.yml (#55) (#58)"
+            },
+            {
+              "SHA": "81f3b07",
+              "Subject": "[cherry-pick] Add script to update release tracker on pr merge (#49) (#52)"
+            },
+            {
+              "SHA": "5ba7bd6",
+              "Subject": "[cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#46)"
+            },
+            {
+              "SHA": "12adf32",
+              "Subject": "[cherry-pick] Add workflow to cherry pick commits to master (#37) (#40)"
+            },
+            {
+              "SHA": "cac2584",
+              "Subject": "Fix chart release process (#36)"
+            },
+            {
+              "SHA": "fadf4ec",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "46669d7",
+              "Subject": "Fix waitForDBReady() logic + Make timeout configurable (#35)"
+            },
+            {
+              "SHA": "338ab6c",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "3acfe21",
+              "Subject": "Merge pull request Allow overriding secret keys from AppBinding #33"
+            },
+            {
+              "SHA": "1c5cd1c",
+              "Subject": "Fix typos (#32)"
+            },
+            {
+              "SHA": "5c09c1b",
+              "Subject": "Update to Kubernetes v1.18.3 (#34)"
+            },
+            {
+              "SHA": "ed629e5",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "0b8cd43",
+              "Subject": "function-args: add pg-back-cmd option"
+            },
+            {
+              "SHA": "161a325",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "062a652",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "ec94eac",
+              "Subject": "Correctly mark optional fields"
+            },
+            {
+              "SHA": "5656c62",
+              "Subject": "Add openapi v3 schema for values file (#27)"
+            }
+          ]
+        },
+        {
           "tag": "11.2-v1",
           "commits": [
             {
