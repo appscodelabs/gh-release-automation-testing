@@ -33,3 +33,30 @@
 
 
 
+## [appscode-cloud/postgres](https://github.com/appscode-cloud/postgres)
+
+### [11.2-v1](https://github.com/appscode-cloud/postgres/releases/tag/11.2-v1)
+
+- [331138b](https://github.com/appscode-cloud/postgres/commit/331138b) Prepare for release 11.2-v1 (#5)
+- [a48d053](https://github.com/appscode-cloud/postgres/commit/a48d053) [cherry-pick] Update update-release-tracker.sh (#69)
+- [7ac5c11](https://github.com/appscode-cloud/postgres/commit/7ac5c11) [cherry-pick] Update update-release-tracker.sh (#64)
+- [ecf236a](https://github.com/appscode-cloud/postgres/commit/ecf236a) [cherry-pick] Update release.yml (#55) (#59)
+- [013242e](https://github.com/appscode-cloud/postgres/commit/013242e) [cherry-pick] Add script to update release tracker on pr merge (#49) (#53)
+- [c8b360b](https://github.com/appscode-cloud/postgres/commit/c8b360b) [cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#47)
+- [2503240](https://github.com/appscode-cloud/postgres/commit/2503240) [cherry-pick] Add workflow to cherry pick commits to master (#37) (#41)
+- [3f7525c](https://github.com/appscode-cloud/postgres/commit/3f7525c) Fix chart release process (#36)
+- [4afcc41](https://github.com/appscode-cloud/postgres/commit/4afcc41) Update .kodiak.toml
+- [861eaa3](https://github.com/appscode-cloud/postgres/commit/861eaa3) Fix waitForDBReady() logic &#43; Make timeout configurable (#35)
+- [85ea8d6](https://github.com/appscode-cloud/postgres/commit/85ea8d6) Create .kodiak.toml
+- [f240c25](https://github.com/appscode-cloud/postgres/commit/f240c25) Merge pull request Allow overriding secret keys from AppBinding #33
+- [4e5898f](https://github.com/appscode-cloud/postgres/commit/4e5898f) Fix typos (#32)
+- [b4b61cf](https://github.com/appscode-cloud/postgres/commit/b4b61cf) Update to Kubernetes v1.18.3 (#34)
+- [62f2714](https://github.com/appscode-cloud/postgres/commit/62f2714) Update crazy-max/ghaction-docker-buildx flag
+- [962df30](https://github.com/appscode-cloud/postgres/commit/962df30) function-args: add pg-back-cmd option
+- [55e792e](https://github.com/appscode-cloud/postgres/commit/55e792e) Trigger the workflow on push or pull request
+- [66b4a51](https://github.com/appscode-cloud/postgres/commit/66b4a51) Auto generate chart readme file
+- [dd606bf](https://github.com/appscode-cloud/postgres/commit/dd606bf) Correctly mark optional fields
+- [efe4799](https://github.com/appscode-cloud/postgres/commit/efe4799) Add openapi v3 schema for values file (#27)
+
+
+
