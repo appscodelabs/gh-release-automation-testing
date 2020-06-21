@@ -1,4 +1,5 @@
 {
+  "product_line": "Stash",
   "release": "v2020.6.16",
   "projects": [
     {
@@ -22,6 +23,136 @@
             {
               "SHA": "1956a312",
               "Subject": "Update to Kubernetes v1.18.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/appscode-cloud/catalog",
+      "releases": [
+        {
+          "tag": "v2020.6.16",
+          "commits": [
+            {
+              "SHA": "9edfea2",
+              "Subject": "Prepare for release v2020.6.16 (#1)"
+            },
+            {
+              "SHA": "a5ea578",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "2ef75bb",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "440b1d9",
+              "Subject": "Add script to update release tracker on pr merge (#24)"
+            },
+            {
+              "SHA": "18d2718",
+              "Subject": "Update catalog.json format"
+            },
+            {
+              "SHA": "137d320",
+              "Subject": "Use Go templates to generate deploy scripts (#23)"
+            },
+            {
+              "SHA": "6ca402a",
+              "Subject": "Generate catalog.sh and readme using Go template (#22)"
+            },
+            {
+              "SHA": "0d00857",
+              "Subject": "Fix crd path in CI workflow (#18)"
+            },
+            {
+              "SHA": "7a9fd44",
+              "Subject": "Remove release workflow (#19)"
+            },
+            {
+              "SHA": "8a617d9",
+              "Subject": "Make script ready for templating (#21)"
+            },
+            {
+              "SHA": "be731f1",
+              "Subject": "Remove non-patched version of addons (#20)"
+            },
+            {
+              "SHA": "cb0310e",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "66a822d",
+              "Subject": "Use Go 1.14.3"
+            },
+            {
+              "SHA": "072db93",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "9c0be4d",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "b1a5cfe",
+              "Subject": "Cleanly end package script if nothing to update."
+            },
+            {
+              "SHA": "c548223",
+              "Subject": "Install helm 3 in CI"
+            },
+            {
+              "SHA": "9411164",
+              "Subject": "Use https url fir cloning repos"
+            },
+            {
+              "SHA": "ff9db1b",
+              "Subject": "Fix package.sh script"
+            },
+            {
+              "SHA": "1216dc8",
+              "Subject": "Add release script to upload charts (#17)"
+            },
+            {
+              "SHA": "5a42c96",
+              "Subject": "Add catalog for MongoDB 4.2 and 4.2.3 (#16)"
+            },
+            {
+              "SHA": "1035b9e",
+              "Subject": "Remove install/uninstall instructions from README.md"
+            },
+            {
+              "SHA": "ce711d0",
+              "Subject": "Add support for HELM 3 (#15)"
+            },
+            {
+              "SHA": "343c1cf",
+              "Subject": "Update twitter account"
+            },
+            {
+              "SHA": "4bc53b4",
+              "Subject": "Fix test (#14)"
+            },
+            {
+              "SHA": "f6e5ad3",
+              "Subject": "Fix charts path"
+            },
+            {
+              "SHA": "a1c8d65",
+              "Subject": "Test installers (#13)"
+            },
+            {
+              "SHA": "f8912f0",
+              "Subject": "Package xtradb chart (#12)"
+            },
+            {
+              "SHA": "f7862e6",
+              "Subject": "Add stash-percona-xtradb chart (#11)"
+            },
+            {
+              "SHA": "2500912",
+              "Subject": "Fix catalog installer (when helm is not installed) (#10)"
             }
           ]
         }

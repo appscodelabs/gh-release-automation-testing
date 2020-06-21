@@ -1,4 +1,4 @@
-# Release v2020.6.16
+# Stash v2020.6.16
 
 
 ## [appscode-cloud/apimachinery](https://github.com/appscode-cloud/apimachinery)
@@ -9,6 +9,43 @@
 - [cbf9b376](https://github.com/appscode-cloud/apimachinery/commit/cbf9b376) Update .kodiak.toml
 - [d12b3d4b](https://github.com/appscode-cloud/apimachinery/commit/d12b3d4b) Update to Kubernetes v1.18.3 (#21)
 - [1956a312](https://github.com/appscode-cloud/apimachinery/commit/1956a312) Update to Kubernetes v1.18.3
+
+
+
+## [appscode-cloud/catalog](https://github.com/appscode-cloud/catalog)
+
+### [v2020.6.16](https://github.com/appscode-cloud/catalog/releases/tag/v2020.6.16)
+
+- [9edfea2](https://github.com/appscode-cloud/catalog/commit/9edfea2) Prepare for release v2020.6.16 (#1)
+- [a5ea578](https://github.com/appscode-cloud/catalog/commit/a5ea578) Update update-release-tracker.sh
+- [2ef75bb](https://github.com/appscode-cloud/catalog/commit/2ef75bb) Update update-release-tracker.sh
+- [440b1d9](https://github.com/appscode-cloud/catalog/commit/440b1d9) Add script to update release tracker on pr merge (#24)
+- [18d2718](https://github.com/appscode-cloud/catalog/commit/18d2718) Update catalog.json format
+- [137d320](https://github.com/appscode-cloud/catalog/commit/137d320) Use Go templates to generate deploy scripts (#23)
+- [6ca402a](https://github.com/appscode-cloud/catalog/commit/6ca402a) Generate catalog.sh and readme using Go template (#22)
+- [0d00857](https://github.com/appscode-cloud/catalog/commit/0d00857) Fix crd path in CI workflow (#18)
+- [7a9fd44](https://github.com/appscode-cloud/catalog/commit/7a9fd44) Remove release workflow (#19)
+- [8a617d9](https://github.com/appscode-cloud/catalog/commit/8a617d9) Make script ready for templating (#21)
+- [be731f1](https://github.com/appscode-cloud/catalog/commit/be731f1) Remove non-patched version of addons (#20)
+- [cb0310e](https://github.com/appscode-cloud/catalog/commit/cb0310e) Create .kodiak.toml
+- [66a822d](https://github.com/appscode-cloud/catalog/commit/66a822d) Use Go 1.14.3
+- [072db93](https://github.com/appscode-cloud/catalog/commit/072db93) Update crazy-max/ghaction-docker-buildx flag
+- [9c0be4d](https://github.com/appscode-cloud/catalog/commit/9c0be4d) Trigger the workflow on push or pull request
+- [b1a5cfe](https://github.com/appscode-cloud/catalog/commit/b1a5cfe) Cleanly end package script if nothing to update.
+- [c548223](https://github.com/appscode-cloud/catalog/commit/c548223) Install helm 3 in CI
+- [9411164](https://github.com/appscode-cloud/catalog/commit/9411164) Use https url fir cloning repos
+- [ff9db1b](https://github.com/appscode-cloud/catalog/commit/ff9db1b) Fix package.sh script
+- [1216dc8](https://github.com/appscode-cloud/catalog/commit/1216dc8) Add release script to upload charts (#17)
+- [5a42c96](https://github.com/appscode-cloud/catalog/commit/5a42c96) Add catalog for MongoDB 4.2 and 4.2.3 (#16)
+- [1035b9e](https://github.com/appscode-cloud/catalog/commit/1035b9e) Remove install/uninstall instructions from README.md
+- [ce711d0](https://github.com/appscode-cloud/catalog/commit/ce711d0) Add support for HELM 3 (#15)
+- [343c1cf](https://github.com/appscode-cloud/catalog/commit/343c1cf) Update twitter account
+- [4bc53b4](https://github.com/appscode-cloud/catalog/commit/4bc53b4) Fix test (#14)
+- [f6e5ad3](https://github.com/appscode-cloud/catalog/commit/f6e5ad3) Fix charts path
+- [a1c8d65](https://github.com/appscode-cloud/catalog/commit/a1c8d65) Test installers (#13)
+- [f8912f0](https://github.com/appscode-cloud/catalog/commit/f8912f0) Package xtradb chart (#12)
+- [f7862e6](https://github.com/appscode-cloud/catalog/commit/f7862e6) Add stash-percona-xtradb chart (#11)
+- [2500912](https://github.com/appscode-cloud/catalog/commit/2500912) Fix catalog installer (when helm is not installed) (#10)
 
 
 
