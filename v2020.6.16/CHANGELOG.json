@@ -1,0 +1,824 @@
+{
+  "product_line": "Stash",
+  "release": "v2020.6.16",
+  "projects": [
+    {
+      "url": "github.com/appscode-cloud/apimachinery",
+      "releases": [
+        {
+          "tag": "v0.10.0-alpha.2",
+          "commits": [
+            {
+              "SHA": "6e0ad5f8",
+              "Subject": "Add script to update release tracker on pr merge (#23)"
+            },
+            {
+              "SHA": "cbf9b376",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "d12b3d4b",
+              "Subject": "Update to Kubernetes v1.18.3 (#21)"
+            },
+            {
+              "SHA": "1956a312",
+              "Subject": "Update to Kubernetes v1.18.3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/appscode-cloud/catalog",
+      "releases": [
+        {
+          "tag": "v2020.6.16",
+          "commits": [
+            {
+              "SHA": "9edfea2",
+              "Subject": "Prepare for release v2020.6.16 (#1)"
+            },
+            {
+              "SHA": "a5ea578",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "2ef75bb",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "440b1d9",
+              "Subject": "Add script to update release tracker on pr merge (#24)"
+            },
+            {
+              "SHA": "18d2718",
+              "Subject": "Update catalog.json format"
+            },
+            {
+              "SHA": "137d320",
+              "Subject": "Use Go templates to generate deploy scripts (#23)"
+            },
+            {
+              "SHA": "6ca402a",
+              "Subject": "Generate catalog.sh and readme using Go template (#22)"
+            },
+            {
+              "SHA": "0d00857",
+              "Subject": "Fix crd path in CI workflow (#18)"
+            },
+            {
+              "SHA": "7a9fd44",
+              "Subject": "Remove release workflow (#19)"
+            },
+            {
+              "SHA": "8a617d9",
+              "Subject": "Make script ready for templating (#21)"
+            },
+            {
+              "SHA": "be731f1",
+              "Subject": "Remove non-patched version of addons (#20)"
+            },
+            {
+              "SHA": "cb0310e",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "66a822d",
+              "Subject": "Use Go 1.14.3"
+            },
+            {
+              "SHA": "072db93",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "9c0be4d",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "b1a5cfe",
+              "Subject": "Cleanly end package script if nothing to update."
+            },
+            {
+              "SHA": "c548223",
+              "Subject": "Install helm 3 in CI"
+            },
+            {
+              "SHA": "9411164",
+              "Subject": "Use https url fir cloning repos"
+            },
+            {
+              "SHA": "ff9db1b",
+              "Subject": "Fix package.sh script"
+            },
+            {
+              "SHA": "1216dc8",
+              "Subject": "Add release script to upload charts (#17)"
+            },
+            {
+              "SHA": "5a42c96",
+              "Subject": "Add catalog for MongoDB 4.2 and 4.2.3 (#16)"
+            },
+            {
+              "SHA": "1035b9e",
+              "Subject": "Remove install/uninstall instructions from README.md"
+            },
+            {
+              "SHA": "ce711d0",
+              "Subject": "Add support for HELM 3 (#15)"
+            },
+            {
+              "SHA": "343c1cf",
+              "Subject": "Update twitter account"
+            },
+            {
+              "SHA": "4bc53b4",
+              "Subject": "Fix test (#14)"
+            },
+            {
+              "SHA": "f6e5ad3",
+              "Subject": "Fix charts path"
+            },
+            {
+              "SHA": "a1c8d65",
+              "Subject": "Test installers (#13)"
+            },
+            {
+              "SHA": "f8912f0",
+              "Subject": "Package xtradb chart (#12)"
+            },
+            {
+              "SHA": "f7862e6",
+              "Subject": "Add stash-percona-xtradb chart (#11)"
+            },
+            {
+              "SHA": "2500912",
+              "Subject": "Fix catalog installer (when helm is not installed) (#10)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/appscode-cloud/cli",
+      "releases": [
+        {
+          "tag": "v0.10.0-alpha.2",
+          "commits": [
+            {
+              "SHA": "3f49074",
+              "Subject": "Prepare for release v0.10.0-alpha.2"
+            },
+            {
+              "SHA": "b1b28ff",
+              "Subject": "Use GITHUB_BASE_REF to detect target branch"
+            },
+            {
+              "SHA": "1e16b99",
+              "Subject": "Add script to update release tracker on pr merge (#21)"
+            },
+            {
+              "SHA": "f91bf33",
+              "Subject": "Make release non-draft"
+            },
+            {
+              "SHA": "d29bdb6",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "b727108",
+              "Subject": "Update to Kubernetes v1.18.3 (#20)"
+            },
+            {
+              "SHA": "f3f03aa",
+              "Subject": "Update to Kubernetes v1.18.3"
+            },
+            {
+              "SHA": "bcd7c5e",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "9882aa2",
+              "Subject": "Add blank line after license header (#19)"
+            },
+            {
+              "SHA": "7774218",
+              "Subject": "Update dev scripts (#18)"
+            },
+            {
+              "SHA": "38eb35c",
+              "Subject": "Run unit tests against SRC_PKGS"
+            },
+            {
+              "SHA": "526949c",
+              "Subject": "Update to Kubernetes v1.18.3 (#17)"
+            },
+            {
+              "SHA": "fc3e6c5",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "3943575",
+              "Subject": "Trigger the workflow on push or pull request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/appscode-cloud/installer",
+      "releases": [
+        {
+          "tag": "v0.10.0-alpha.2",
+          "commits": [
+            {
+              "SHA": "e355f71",
+              "Subject": "Prepare for release v0.10.0-alpha.2 (#1)"
+            },
+            {
+              "SHA": "634da4d",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "1155610",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "1b10b5e",
+              "Subject": "Add script to update release tracker on pr merge (#67)"
+            },
+            {
+              "SHA": "ce0b28e",
+              "Subject": "Update release workflow"
+            },
+            {
+              "SHA": "c3ac668",
+              "Subject": "Update ci.yml"
+            },
+            {
+              "SHA": "98bad7e",
+              "Subject": "Add Stash Enterprise chart (#63)"
+            },
+            {
+              "SHA": "73f52a6",
+              "Subject": "Add commands to update chart (#65)"
+            },
+            {
+              "SHA": "0dc7f91",
+              "Subject": "Fix chart release process (#64)"
+            },
+            {
+              "SHA": "0d5c4e1",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "3b53e64",
+              "Subject": "Update to Kubernetes v1.18.3 (#58)"
+            },
+            {
+              "SHA": "43c5dbe",
+              "Subject": "Update to Kubernetes v1.18.3"
+            },
+            {
+              "SHA": "b9e784c",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "b30b3b0",
+              "Subject": "Merge pull request #57 from stashed/psp"
+            },
+            {
+              "SHA": "1b89401",
+              "Subject": "Disable apparmor and seccomp by default"
+            },
+            {
+              "SHA": "6bed1aa",
+              "Subject": "Pass psp names for the jobs through flag"
+            },
+            {
+              "SHA": "bd35d81",
+              "Subject": "Always use baseline psp for stash"
+            },
+            {
+              "SHA": "4e3474a",
+              "Subject": "Add RBAC permission for generic-garbage-collector (#56)"
+            },
+            {
+              "SHA": "be006f6",
+              "Subject": "Permit configmap list/watch -ing for delegated authentication checking (#55)"
+            },
+            {
+              "SHA": "5685c15",
+              "Subject": "Update dependencies"
+            },
+            {
+              "SHA": "8b7b805",
+              "Subject": "Update dependencies"
+            },
+            {
+              "SHA": "d2b2b09",
+              "Subject": "Generate both v1beta1 and v1 CRD YAML (#54)"
+            },
+            {
+              "SHA": "7fbcb29",
+              "Subject": "Update to Kubernetes v1.18.3 (#53)"
+            },
+            {
+              "SHA": "88e5e8c",
+              "Subject": "Use Go 1.14.3"
+            },
+            {
+              "SHA": "8e56cb1",
+              "Subject": "Trigger build on push to only master branch"
+            },
+            {
+              "SHA": "562caf8",
+              "Subject": "Use recommended kubernetes app labels (#52)"
+            },
+            {
+              "SHA": "cc55e5a",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "fd8acf5",
+              "Subject": "Update chart readme"
+            },
+            {
+              "SHA": "672f37e",
+              "Subject": "Show examples in chart readme"
+            },
+            {
+              "SHA": "39f4ca1",
+              "Subject": "Auto generate chart readme file (#50)"
+            },
+            {
+              "SHA": "47f4250",
+              "Subject": "Update release.yml"
+            },
+            {
+              "SHA": "b68d9cb",
+              "Subject": "Cleanup newlines"
+            },
+            {
+              "SHA": "20d51b0",
+              "Subject": "Reformat stash chart template (#49)"
+            },
+            {
+              "SHA": "65f8bee",
+              "Subject": "Use kubectl v1.16 as cleaner (#48)"
+            },
+            {
+              "SHA": "85a7cfd",
+              "Subject": "Rename prometheus.io/coreos-operator to prometheus.io/operator (#47)"
+            },
+            {
+              "SHA": "b042def",
+              "Subject": "Move apireg annotation to operator pod (#46)"
+            },
+            {
+              "SHA": "a543953",
+              "Subject": "Various cleanup (#44)"
+            },
+            {
+              "SHA": "b6e2bec",
+              "Subject": "Fix helm install --wait flag (#42)"
+            },
+            {
+              "SHA": "806aada",
+              "Subject": "Do not harcode namespace (#40)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/appscode-cloud/postgres",
+      "releases": [
+        {
+          "tag": "9.6-v1",
+          "commits": [
+            {
+              "SHA": "becc942",
+              "Subject": "Prepare for release 9.6-v1 (#6)"
+            },
+            {
+              "SHA": "875c1f0",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#70)"
+            },
+            {
+              "SHA": "0e71e2d",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#65)"
+            },
+            {
+              "SHA": "bbfac61",
+              "Subject": "[cherry-pick] Update release.yml (#55) (#60)"
+            },
+            {
+              "SHA": "986d0a7",
+              "Subject": "[cherry-pick] Add script to update release tracker on pr merge (#49) (#54)"
+            },
+            {
+              "SHA": "6edaf36",
+              "Subject": "[cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#48)"
+            },
+            {
+              "SHA": "6743dbe",
+              "Subject": "[cherry-pick] Add workflow to cherry pick commits to master (#37) (#42)"
+            },
+            {
+              "SHA": "fb4f222",
+              "Subject": "Fix chart release process (#36)"
+            },
+            {
+              "SHA": "b5ddf5f",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "7951787",
+              "Subject": "Fix waitForDBReady() logic + Make timeout configurable (#35)"
+            },
+            {
+              "SHA": "e7bb18f",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "60acc09",
+              "Subject": "Merge pull request Allow overriding secret keys from AppBinding #33"
+            },
+            {
+              "SHA": "aaff7fb",
+              "Subject": "Fix typos (#32)"
+            },
+            {
+              "SHA": "568f584",
+              "Subject": "Update to Kubernetes v1.18.3 (#34)"
+            },
+            {
+              "SHA": "098bb78",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "4385362",
+              "Subject": "function-args: add pg-back-cmd option"
+            },
+            {
+              "SHA": "7cd065c",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "b63e3e5",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "dea1a41",
+              "Subject": "Correctly mark optional fields"
+            },
+            {
+              "SHA": "efc4283",
+              "Subject": "Add openapi v3 schema for values file (#27)"
+            }
+          ]
+        },
+        {
+          "tag": "10.2-v1",
+          "commits": [
+            {
+              "SHA": "2f21ce4",
+              "Subject": "Prepare for release 10.2-v1 (#2)"
+            },
+            {
+              "SHA": "bac456e",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#66)"
+            },
+            {
+              "SHA": "a50a3a8",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#61)"
+            },
+            {
+              "SHA": "2d792b7",
+              "Subject": "[cherry-pick] Update release.yml (#55) (#56)"
+            },
+            {
+              "SHA": "c4603ac",
+              "Subject": "[cherry-pick] Add script to update release tracker on pr merge (#49) (#50)"
+            },
+            {
+              "SHA": "0c08bad",
+              "Subject": "[cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#44)"
+            },
+            {
+              "SHA": "6764fe3",
+              "Subject": "[cherry-pick] Add workflow to cherry pick commits to master (#37) (#38)"
+            },
+            {
+              "SHA": "826f678",
+              "Subject": "Fix chart release process (#36)"
+            },
+            {
+              "SHA": "e5146e3",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "d4d68ef",
+              "Subject": "Fix waitForDBReady() logic + Make timeout configurable (#35)"
+            },
+            {
+              "SHA": "78fa0ac",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "23cfc56",
+              "Subject": "Merge pull request Allow overriding secret keys from AppBinding #33"
+            },
+            {
+              "SHA": "0cdc7c9",
+              "Subject": "Fix typos (#32)"
+            },
+            {
+              "SHA": "a148ace",
+              "Subject": "Update to Kubernetes v1.18.3 (#34)"
+            },
+            {
+              "SHA": "db126f4",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "854a522",
+              "Subject": "function-args: add pg-back-cmd option"
+            },
+            {
+              "SHA": "e64e5b0",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "d667589",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "f562d87",
+              "Subject": "Correctly mark optional fields"
+            },
+            {
+              "SHA": "3c5b7bc",
+              "Subject": "Add openapi v3 schema for values file (#27)"
+            }
+          ]
+        },
+        {
+          "tag": "10.6-v1",
+          "commits": [
+            {
+              "SHA": "827d977",
+              "Subject": "Prepare for release 10.6-v1 (#3)"
+            },
+            {
+              "SHA": "44bf83d",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#67)"
+            },
+            {
+              "SHA": "e20f246",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#62)"
+            },
+            {
+              "SHA": "0120b84",
+              "Subject": "[cherry-pick] Update release.yml (#55) (#57)"
+            },
+            {
+              "SHA": "ddfc26d",
+              "Subject": "[cherry-pick] Add script to update release tracker on pr merge (#49) (#51)"
+            },
+            {
+              "SHA": "bde7425",
+              "Subject": "[cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#45)"
+            },
+            {
+              "SHA": "00a5c97",
+              "Subject": "[cherry-pick] Add workflow to cherry pick commits to master (#37) (#39)"
+            },
+            {
+              "SHA": "1720053",
+              "Subject": "Fix chart release process (#36)"
+            },
+            {
+              "SHA": "f67d343",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "6f70879",
+              "Subject": "Fix waitForDBReady() logic + Make timeout configurable (#35)"
+            },
+            {
+              "SHA": "39a7fc4",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "4ba7a9f",
+              "Subject": "Merge pull request Allow overriding secret keys from AppBinding #33"
+            },
+            {
+              "SHA": "804433c",
+              "Subject": "Fix typos (#32)"
+            },
+            {
+              "SHA": "42e792f",
+              "Subject": "Update to Kubernetes v1.18.3 (#34)"
+            },
+            {
+              "SHA": "b15f604",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "288b3ea",
+              "Subject": "function-args: add pg-back-cmd option"
+            },
+            {
+              "SHA": "d0ff5d9",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "23e9f4a",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "9431b3a",
+              "Subject": "Correctly mark optional fields"
+            },
+            {
+              "SHA": "0fe49c0",
+              "Subject": "Add openapi v3 schema for values file (#27)"
+            }
+          ]
+        },
+        {
+          "tag": "11.1-v1",
+          "commits": [
+            {
+              "SHA": "fc9fc68",
+              "Subject": "Prepare for release 11.1-v1 (#4)"
+            },
+            {
+              "SHA": "6ecb8bc",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#68)"
+            },
+            {
+              "SHA": "526e335",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#63)"
+            },
+            {
+              "SHA": "e5fff5c",
+              "Subject": "[cherry-pick] Update release.yml (#55) (#58)"
+            },
+            {
+              "SHA": "81f3b07",
+              "Subject": "[cherry-pick] Add script to update release tracker on pr merge (#49) (#52)"
+            },
+            {
+              "SHA": "5ba7bd6",
+              "Subject": "[cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#46)"
+            },
+            {
+              "SHA": "12adf32",
+              "Subject": "[cherry-pick] Add workflow to cherry pick commits to master (#37) (#40)"
+            },
+            {
+              "SHA": "cac2584",
+              "Subject": "Fix chart release process (#36)"
+            },
+            {
+              "SHA": "fadf4ec",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "46669d7",
+              "Subject": "Fix waitForDBReady() logic + Make timeout configurable (#35)"
+            },
+            {
+              "SHA": "338ab6c",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "3acfe21",
+              "Subject": "Merge pull request Allow overriding secret keys from AppBinding #33"
+            },
+            {
+              "SHA": "1c5cd1c",
+              "Subject": "Fix typos (#32)"
+            },
+            {
+              "SHA": "5c09c1b",
+              "Subject": "Update to Kubernetes v1.18.3 (#34)"
+            },
+            {
+              "SHA": "ed629e5",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "0b8cd43",
+              "Subject": "function-args: add pg-back-cmd option"
+            },
+            {
+              "SHA": "161a325",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "062a652",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "ec94eac",
+              "Subject": "Correctly mark optional fields"
+            },
+            {
+              "SHA": "5656c62",
+              "Subject": "Add openapi v3 schema for values file (#27)"
+            }
+          ]
+        },
+        {
+          "tag": "11.2-v1",
+          "commits": [
+            {
+              "SHA": "331138b",
+              "Subject": "Prepare for release 11.2-v1 (#5)"
+            },
+            {
+              "SHA": "a48d053",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#69)"
+            },
+            {
+              "SHA": "7ac5c11",
+              "Subject": "[cherry-pick] Update update-release-tracker.sh (#64)"
+            },
+            {
+              "SHA": "ecf236a",
+              "Subject": "[cherry-pick] Update release.yml (#55) (#59)"
+            },
+            {
+              "SHA": "013242e",
+              "Subject": "[cherry-pick] Add script to update release tracker on pr merge (#49) (#53)"
+            },
+            {
+              "SHA": "c8b360b",
+              "Subject": "[cherry-pick] Remove /cherry-pick from cherry picked prs (#43) (#47)"
+            },
+            {
+              "SHA": "2503240",
+              "Subject": "[cherry-pick] Add workflow to cherry pick commits to master (#37) (#41)"
+            },
+            {
+              "SHA": "3f7525c",
+              "Subject": "Fix chart release process (#36)"
+            },
+            {
+              "SHA": "4afcc41",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "861eaa3",
+              "Subject": "Fix waitForDBReady() logic + Make timeout configurable (#35)"
+            },
+            {
+              "SHA": "85ea8d6",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "f240c25",
+              "Subject": "Merge pull request Allow overriding secret keys from AppBinding #33"
+            },
+            {
+              "SHA": "4e5898f",
+              "Subject": "Fix typos (#32)"
+            },
+            {
+              "SHA": "b4b61cf",
+              "Subject": "Update to Kubernetes v1.18.3 (#34)"
+            },
+            {
+              "SHA": "62f2714",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "962df30",
+              "Subject": "function-args: add pg-back-cmd option"
+            },
+            {
+              "SHA": "55e792e",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "66b4a51",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "dd606bf",
+              "Subject": "Correctly mark optional fields"
+            },
+            {
+              "SHA": "efe4799",
+              "Subject": "Add openapi v3 schema for values file (#27)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
