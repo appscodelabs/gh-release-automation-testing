@@ -1,0 +1,152 @@
+{
+  "product_line": "Stash",
+  "release": "v2020.6.23",
+  "docs_url_template": "https://stash.run/docs/%s",
+  "kubernetes_version": "1.12+",
+  "projects": [
+    {
+      "github.com/appscode-cloud/apimachinery": {
+        "tag": "v0.10.0-alpha.3"
+      }
+    },
+    {
+      "github.com/appscode-cloud/cli": {
+        "key": "stash-cli",
+        "tag": "v0.10.0-alpha.3"
+      }
+    },
+    {
+      "github.com/appscode-cloud/postgres": {
+        "key": "stash-postgres",
+        "tags": {
+          "10.2-v1": "release-10.2",
+          "10.6-v1": "release-10.6",
+          "11.1-v1": "release-11.1",
+          "11.2-v1": "release-11.2",
+          "9.6-v1": "release-9.6"
+        },
+        "commands": [
+          "make update-charts CHART_VERSION=${TAG}"
+        ]
+      }
+    },
+    {
+      "github.com/appscode-cloud/stash": {
+        "key": "stash",
+        "tag": "v0.10.0-alpha.3"
+      }
+    },
+    {
+      "github.com/appscode-cloud/installer": {
+        "tag": "v0.10.0-alpha.3",
+        "commands": [
+          "make chart-stash CHART_VERSION=${TAG}"
+        ]
+      }
+    },
+    {
+      "github.com/appscode-cloud/charts": {
+        "charts": [
+          "github.com/appscode-cloud/postgres",
+          "github.com/appscode-cloud/installer"
+        ],
+        "changelog": "Skip"
+      }
+    },
+    {
+      "github.com/appscode-cloud/catalog": {
+        "key": "stash-catalog",
+        "tag": "v2020.6.23",
+        "commands": [
+          "release-automaton stash gen-catalog --release-file=${SCRIPT_ROOT}/${TAG}/release.json --catalog-file=${WORKSPACE}/catalog.json",
+          "make gen fmt"
+        ],
+        "release_branch": "release-${TAG}"
+      }
+    },
+    {
+      "github.com/appscode-cloud/static-assets": {
+        "commands": [
+          "release-automaton update-assets --release-file=${SCRIPT_ROOT}/${RELEASE}/release.json --workspace=${WORKSPACE}"
+        ],
+        "changelog": "StandaloneWebsite"
+      }
+    },
+    {
+      "github.com/appscode-cloud/docs": {
+        "tag": "v2020.6.23",
+        "commands": [
+          "mv ${SCRIPT_ROOT}/${RELEASE}/docs_changelog.md --workspace=${WORKSPACE}/docs/CHANGELOG-${RELEASE}.md"
+        ]
+      }
+    },
+    {
+      "github.com/appscode-cloud/website": {
+        "tag": "v2020.6.23",
+        "commands": [
+          "make set-assets-repo ASSETS_REPO_URL=https://github.com/appscode-cloud/static-assets",
+          "make docs",
+          "make set-version VERSION=${TAG}"
+        ],
+        "release_branch": "master",
+        "ready_to_tag": true,
+        "changelog": "Skip"
+      }
+    },
+    {
+      "github.com/stashed/bundles": {
+        "tag": "v2020.6.23",
+        "commands": [
+          "release-automaton update-bundles --release-file=${SCRIPT_ROOT}/${RELEASE}/release.json --workspace=${WORKSPACE} --charts-dir=charts"
+        ]
+      }
+    },
+    {
+      "github.com/bytebuilders/bundles": {
+        "charts": [
+          "github.com/stashed/bundles"
+        ],
+        "changelog": "Skip"
+      }
+    }
+  ],
+  "external_projects": {
+    "github.com/kubedb/apimachinery": {},
+    "github.com/kubedb/cli": {},
+    "github.com/kubedb/elasticsearch": {
+      "commands": [
+        "echo STASH_VERSION=${STASH_VERSION} > Makefile.env",
+        "echo STASH_CATALOG_VERSION=${STASH_CATALOG_VERSION} >> Makefile.env"
+      ]
+    },
+    "github.com/kubedb/memcached": {},
+    "github.com/kubedb/mongodb": {
+      "commands": [
+        "echo STASH_VERSION=${STASH_VERSION} > Makefile.env",
+        "echo STASH_CATALOG_VERSION=${STASH_CATALOG_VERSION} >> Makefile.env"
+      ]
+    },
+    "github.com/kubedb/mysql": {
+      "commands": [
+        "echo STASH_VERSION=${STASH_VERSION} > Makefile.env",
+        "echo STASH_CATALOG_VERSION=${STASH_CATALOG_VERSION} >> Makefile.env"
+      ]
+    },
+    "github.com/kubedb/operator": {},
+    "github.com/kubedb/percona-xtradb": {
+      "commands": [
+        "echo STASH_VERSION=${STASH_VERSION} > Makefile.env",
+        "echo STASH_CATALOG_VERSION=${STASH_CATALOG_VERSION} >> Makefile.env"
+      ]
+    },
+    "github.com/kubedb/pgbouncer": {},
+    "github.com/kubedb/postgres": {
+      "commands": [
+        "echo STASH_VERSION=${STASH_VERSION} > Makefile.env",
+        "echo STASH_CATALOG_VERSION=${STASH_CATALOG_VERSION} >> Makefile.env"
+      ]
+    },
+    "github.com/kubedb/proxysql": {},
+    "github.com/kubedb/redis": {}
+  }
+}
