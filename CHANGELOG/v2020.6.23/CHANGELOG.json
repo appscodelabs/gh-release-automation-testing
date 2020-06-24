@@ -1,0 +1,48 @@
+{
+  "product_line": "Stash",
+  "release": "v2020.6.23",
+  "release_date": "2020-06-24T01:46:19.993525537Z",
+  "release_project_url": "https://github.com/",
+  "docs_url": "https://stash.run/docs/v2020.6.23",
+  "kubernetes_version": "1.12+",
+  "projects": [
+    {
+      "url": "github.com/appscode-cloud/apimachinery",
+      "releases": [
+        {
+          "tag": "v0.10.0-alpha.3",
+          "commits": [
+            {
+              "SHA": "28d53699",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "34624044",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "5f5de63c",
+              "Subject": "Fix openapi path (#24)"
+            },
+            {
+              "SHA": "6e0ad5f8",
+              "Subject": "Add script to update release tracker on pr merge (#23)"
+            },
+            {
+              "SHA": "cbf9b376",
+              "Subject": "Update .kodiak.toml"
+            },
+            {
+              "SHA": "d12b3d4b",
+              "Subject": "Update to Kubernetes v1.18.3 (#21)"
+            },
+            {
+              "SHA": "1956a312",
+              "Subject": "Update to Kubernetes v1.18.3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
