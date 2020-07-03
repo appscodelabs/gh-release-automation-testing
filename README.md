@@ -118,3 +118,7 @@ $ git tag -d <tag_name>
 $ git push --delete origin tagname
 $ git push origin :refs/tags/<tag>
 ```
+
+## Git: Diff Between {Working Dir, Staged Area, Last Commit}
+
+http://xahlee.info/linux/git_diff.html
