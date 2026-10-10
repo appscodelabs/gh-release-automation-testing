@@ -52,7 +52,7 @@ jobs:
           chmod +x yq
           sudo mv yq /usr/local/bin/yq
           # install kubectl
-          curl -LO https://dl.k8s.io/release/v1.32.1/bin/linux/amd64/kubectl
+          curl -LO https://dl.k8s.io/release/v1.37.0/bin/linux/amd64/kubectl
           chmod +x ./kubectl
           sudo mv ./kubectl /usr/local/bin/kubectl
 
